@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login Page || Workout Session</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <h1>Sign In</h1>
+
+    <!-- LOGIN FORM -->
+    <form class="login-form">
+        <label for="username-txt">Username:
+        <input type="text" class="input username-txt" name="username" required><br></label>
+        <label for="password-txt">Password:
+        <input type="password" class="input password-txt" name="password" required><br></label>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+    <hr>
+    <p>Need an account? <a href="/auth/signup.html">Signup</a></p>
+    <p>Or go <a href="/">home</a>.</p>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="../utilities/cache.module.js"></script>
+    <script src="../utilities/render.module.js"></script>
+    <script src="../utilities/http.module.js"></script>
+    <script src="./auth.page.js"></script>
+</body>
+</html>
