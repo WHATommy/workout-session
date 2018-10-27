@@ -7,6 +7,7 @@ const { UserJoiSchema } = require('./user.model.js');
 $(document).ready(onPageLoad);
 
 function onPageLoad() {
+    console.log('onPage is working -------------------------------------')
     $('.sign-up-form').submit(onSignUpSubmit);
     $('.login-form').submit(onLoginSubmit);
 }
