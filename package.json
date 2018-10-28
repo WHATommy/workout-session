@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "start.js",
   "scripts": {
     "test": "mocha",
@@ -24,5 +23,17 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WHATommy/workout-session.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WHATommy/workout-session/issues"
+  },
+  "homepage": "https://github.com/WHATommy/workout-session#readme",
+  "description": ""
 }

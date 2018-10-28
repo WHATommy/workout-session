@@ -93,7 +93,7 @@ function createWorkout(options) {
 }
 
 function updateWorkout(options) {
-    const {jwtToken, workoutId, newWorkout, onSuccess, onError } = options;
+    const { jwtToken, workoutId, newWorkout, onSuccess, onError } = options;
 
     $.ajax({
         type: 'PUT',
