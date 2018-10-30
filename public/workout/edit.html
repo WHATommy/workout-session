@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Workout</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="./edit.css">
+</head>
+
+<body>
+    <form class="workout-edit-form">
+        <a href="/" class="button">Back to Home</a>
+        <h1>Create new Workout</h1>
+        <label for="title-txt">
+            Title:
+            <br><input class="title-txt" class="form-field" type="text" disabled required>
+        </label>
+        <br><br>
+        <label for="weight-txt">
+            Weight:
+            <br><input class="weight-txt" class="form-field" disabled required>
+        </label>
+        <br><br>
+        <label for="reps-txt">
+            Reps:
+            <br><input class="reps-txt" class="form-field" disabled required>
+        </label>
+        <br><br>
+        <button type="submit" class="submit-btn" value="Edit New Workout">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../utilities/etc.module.js"></script>
+    <script src="../utilities/cache.module.js"></script>
+    <script src="../utilities/render.module.js"></script>
+    <script src="../utilities/http.module.js"></script>
+    <script src="./edit.page.js"></script>
+</body>
+
+</html>

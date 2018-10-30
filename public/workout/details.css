@@ -1,0 +1,59 @@
+html {
+    background-color: black;
+}
+
+body {
+    margin-top: 90px;
+    font-family: 'Muli';
+}
+
+.workout-details {
+    background-color: white;
+    border-radius: 5px;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+}
+
+.edit-workout-btn {
+    transition: 0.3s;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.edit-workout-btn:hover { 
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+a {
+    float: right;
+}
+
+.button {
+    transition: 0.3s;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.button:hover { 
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
