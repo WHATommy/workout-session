@@ -26,6 +26,7 @@ body {
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 10px;
+    height: 52px;
 }
 
 .edit-workout-btn:hover { 
@@ -50,6 +51,7 @@ a {
     margin-top: 15px;
     margin-bottom: 10px;
     text-decoration: none;
+    height: 30px;
 }
 
 .button:hover { 
@@ -57,3 +59,59 @@ a {
     background-color: rgb(255, 255, 255);
     color: black;
 }
+
+@media only screen and (max-width: 1150px) {
+    .edit-workout-btn {
+        font-size: 15px;
+        height: 47px;
+    }
+
+    .button {
+        font-size: 15px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .edit-workout-btn {
+        font-size: 12px;
+        height: 42px;
+        float: left;
+    }
+
+    .button {
+        font-size: 12px;
+        height: 20px;
+        float: left;
+    }
+
+    h1, i, p {
+        display: block;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .edit-workout-btn {
+        font-size: 9px;
+        height: 37px;
+    }
+
+    .button {
+        font-size: 9px;
+        height: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .edit-workout-btn {
+        font-size: 6px;
+    }
+
+    .button {
+        font-size: 6px;
+    }
+}
+
+

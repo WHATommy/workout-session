@@ -24,7 +24,7 @@ form {
   text-align: center;
 }
   
-.input {
+input {
   margin: 5px;
   border: 1px solid black;
   padding: 4px;
@@ -47,4 +47,48 @@ form {
   transition: 0.3s;
   background-color: rgb(255, 255, 255);
   color: black;
+}
+
+@media only screen and (max-width: 1275px) {
+  form {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+  }
+
+  input {
+    display: block;
+    width: 80%;
+    margin: auto;
+    font-size: 12px;
+  }
+
+  .login-btn {
+    display: block;
+    width: 30%;
+    margin: auto;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  form {
+    text-align: center;
+  }
+
+  input {
+    font-size: 9px;
+    width: 50%;
+  }
+
+  .login-btn {
+    font-size: 9px;
+    width: 55px;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  label {
+    font-size: 12px;
+  }
 }
