@@ -9,8 +9,8 @@ module.exports = {
         NOT_FOUND: 404,
         INTERNAL_SERVER_ERROR: 500,
     },
-    MONGO_URL: process.env.MONGO_URL || 'mongodb://localhost:27017/workout-session',
-    TEST_MONGO_URL: process.env.TEST_MONGO_URL || 'mongodb://localhost:27017/workout-session',
+    MONGO_URL: process.env.MONGO_URL || 'mongodb://testing:testing123@ds147723.mlab.com:47723/workout-session',
+    TEST_MONGO_URL: process.env.TEST_MONGO_URL || 'mongodb://testing:testing123@ds147723.mlab.com:47723/workout-session',
     JWT_SECRET: process.env.JWT_SECRET || 'default',
     JWT_EXPIRY: process.env.JWT_EXPIRY || '7d'
 };
