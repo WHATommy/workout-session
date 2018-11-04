@@ -30,9 +30,9 @@ function onEditSubmit(event) {
         workoutId: STATE.workoutId,
         newWorkout: newWorkout,
         jwtToken: STATE.authUser.jwtToken,
-        onSuccess: Workout => {
+        onSuccess: workout => {
             alert('Workout changes saved succesfully, redirecting ...');
-            window.open(`/Workout/details.html?id=${STATE.workoutId}`, '_self');
+            window.open(`/workout/details.html?id=${STATE.workoutId}`, '_self');
         },
         onError: err => {
             alert('There was a problem editing this Workout, please try again later.');
