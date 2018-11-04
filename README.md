@@ -8,4 +8,4 @@ Create a new workout session
 Input the name, weight, and reps they did in that session
 Finally, create the new session
 
-Heres a live link to the app: https://fathomless-dusk-50608.herokuapp.com/
+Heres a live link to the app: https://workoutsession.herokuapp.com/
