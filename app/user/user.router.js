@@ -17,6 +17,7 @@ userRouter.post('/', (request, response) => {
 
     const validation = Joi.validate(newUser, UserJoiSchema);
     if (validation.error) {
+        alert('Password must be atleast 3 characters long, Username must be atleast 4 characters long');
         return response.status(HTTP_STATUS_CODES.BAD_REQUEST).json({ error: validation.error });
     }
     User.findOne({

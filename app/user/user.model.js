@@ -29,7 +29,7 @@ userSchema.methods.validatePassword = function (password) {
 const UserJoiSchema = Joi.object().keys({
     name: Joi.string().min(1).trim().required(),
     username: Joi.string().alphanum().min(4).max(30).trim().required(),
-    password: Joi.string().min(8).max(30).trim().required(),
+    password: Joi.string().min(3).max(50).trim().required(),
     email: Joi.string().email().trim().required()
 });
 
