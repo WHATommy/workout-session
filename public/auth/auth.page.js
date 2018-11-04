@@ -26,7 +26,7 @@ function onSignUpSubmit(event) {
             window.open('/auth/login.html', '_self');
         },
         onError: err => {
-            alert('There was a problem processing your request, please try again later.');
+            alert('Password must be atleast 3 characters long, Username must be atleast 4 characters long');
         }
     });
 }
