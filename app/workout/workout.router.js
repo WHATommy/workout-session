@@ -6,7 +6,7 @@ const { HTTP_STATUS_CODES } = require('../config.js');
 const { jwtPassportMiddleware } = require('../auth/auth.strategy');
 const { Workout, WorkoutJoiSchema } = require('./workout.model.js');
 
-// CREATE NEW NOTE
+// CREATE NEW NOTE using the express application methods
 workoutRouter.post('/', jwtPassportMiddleware, (request, response) => {
     const newWorkout = {
         user: request.user.id,
@@ -30,7 +30,7 @@ workoutRouter.post('/', jwtPassportMiddleware, (request, response) => {
         });
 });
 
-// RETRIEVE USER's NOTES
+// RETRIEVE USER's NOTES using the express application methods
 workoutRouter.get('/', jwtPassportMiddleware, (request, response) => {
     Workout.find({ user: request.user.id })
         .populate('user')
@@ -44,7 +44,7 @@ workoutRouter.get('/', jwtPassportMiddleware, (request, response) => {
         });
 });
 
-// RETRIEVE ALL NOTES
+// RETRIEVE ALL NOTES using the express application methods
 workoutRouter.get('/all', (request, response) => {
     Workout.find()
         .populate('user')
@@ -59,7 +59,7 @@ workoutRouter.get('/all', (request, response) => {
 });
 
 
-// RETRIEVE ONE NOTE BY ID
+// RETRIEVE ONE NOTE BY ID using the express application methods
 workoutRouter.get('/:workoutid', (request, response) => {
     Workout.findById(request.params.workoutid)
         .populate('user')
@@ -71,7 +71,7 @@ workoutRouter.get('/:workoutid', (request, response) => {
         });
 });
 
-// REMOVE NOTE BY ID
+// REMOVE NOTE BY ID using the express application methods
 workoutRouter.put('/:workoutid', jwtPassportMiddleware, (request, response) => {
     const workoutUpdate = {
         title: request.body.title,
@@ -91,7 +91,7 @@ workoutRouter.put('/:workoutid', jwtPassportMiddleware, (request, response) => {
         });
 });
 
-// REMOVE NOTE BY ID
+// REMOVE NOTE BY ID using the express application methods
 workoutRouter.delete('/:workoutid', jwtPassportMiddleware, (request, response) => {
     Workout.findByIdAndDelete(request.params.workoutid)
         .then(() => {
