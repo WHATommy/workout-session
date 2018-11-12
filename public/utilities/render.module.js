@@ -1,3 +1,4 @@
+//Global Functions, ;etting other files have access to these functions
 window.RENDER_MODULE = {
     renderWorkoutsList,
     renderWorkoutDetails,

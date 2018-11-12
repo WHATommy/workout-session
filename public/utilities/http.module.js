@@ -1,3 +1,4 @@
+//Global Functions, ;etting other files have access to these functions
 window.HTTP_MODULE = {
     signupUser,
     loginUser,
@@ -8,6 +9,10 @@ window.HTTP_MODULE = {
     deleteWorkout
 };
 
+/*FUNCTION: Grabs the data from userData, onSuccess, and onError.
+If successful, run the onSuccess function and send it to the /api/user router
+for the server to handle the data. If not, run the onError function
+*/
 function signupUser(options) {
     const { userData, onSuccess, onError } = options;
     $.ajax({
@@ -26,6 +31,10 @@ function signupUser(options) {
     });
 }
 
+/*FUNCTION: Grabs the data from userData, onSuccess, and onError.
+If successful, run the onSuccess function and send it to the /api/user/login router
+for the server to handle the data. If not, run the onError function
+*/
 function loginUser(options) {
     const { userData, onSuccess, onError } = options;
     $.ajax({
@@ -53,6 +62,8 @@ function getUserWorkouts(options) {
         dataType: 'json',
         data: undefined,
         beforeSend: function (xhr) {
+            /*xhr is used to send HTTP or HTTPS requests to a web server
+            and load the server response data back into the script.*/
             xhr.setRequestHeader('Authorization', `Bearer ${jwtToken}`);
         },
         success: onSuccess,
@@ -80,6 +91,8 @@ function createWorkout(options) {
         dataType: 'json',
         data: JSON.stringify(newWorkout),
         beforeSend: function (xhr) {
+            /*xhr is used to send HTTP or HTTPS requests to a web server
+            and load the server response data back into the script.*/
             xhr.setRequestHeader('Authorization', `Bearer ${jwtToken}`);
         },
         success: onSuccess,
@@ -102,6 +115,8 @@ function updateWorkout(options) {
         dataType: 'json',
         data: JSON.stringify(newWorkout),
         beforeSend: function (xhr) {
+            /*xhr is used to send HTTP or HTTPS requests to a web server
+            and load the server response data back into the script.*/
             xhr.setRequestHeader('Authorization', `Bearer ${jwtToken}`);
         },
         success: onSuccess,
@@ -123,6 +138,8 @@ function deleteWorkout(options) {
         dataType: 'json',
         data: undefined,
         beforeSend: function (xhr) {
+            /*xhr is used to send HTTP or HTTPS requests to a web server
+            and load the server response data back into the script.*/
             xhr.setRequestHeader('Authorization', `Bearer ${jwtToken}`);
         },
         success: onSuccess,
