@@ -8,7 +8,7 @@ const userRouter = express.Router();
 
 // CREATE NEW USER using the express application methods
 userRouter.post('/', (request, response) => {
-    //The user's input being placed into one variable, newUser
+    //The user's input being placed into a object, newUser
     const newUser = {
         name: request.body.name,
         email: request.body.email,
@@ -39,7 +39,7 @@ userRouter.post('/', (request, response) => {
     }).then(passwordHash => {
         //Then, replace the raw user password with the hashed password, for security reasons
         newUser.password = passwordHash;
-        //After, using one of Mongo CRUD operators: create, we create the user using the updated user inputted values
+        //After, using one of Mongo CRUD operators: create, we create the user using the updated user inputed values
         User.create(newUser)
             //using the user's updated input values, we return the user's values in a serialized json form
             .then(createdUser => {
@@ -59,25 +59,30 @@ userRouter.post('/', (request, response) => {
 userRouter.get('/', (request, response) => {
     //Find users 
     User.find()
-        //Then, when alll the users are found, respond with the status of OK(200) and map out all the users in a json and serialize format
+        //Then, when all the users are found, respond with the status of OK(200) and map out all the users in a json and serialize format
         .then(users => {
-            return response.status(HTTP_STATUS_CODES.OK).json(
+            return res.status(HTTP_STATUS_CODES.OK).json(
                 users.map(user => user.serialize())
-            );
+            )
         })
+        //If anything happens that did not go the way it was expected to go, return the error
         .catch(error => {
             return response.status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR).json(error);
         });
 });
 // RETRIEVE ONE USER using the express application methods
 userRouter.get('/:userid', (request, response) => {
+    //Finds ONE user via unique ID
     User.findById(request.params.userid)
+        //Then, when the specific user is found, respond with the status of OK(200) and the user in a json and serialize format
         .then(user => {
             return response.status(HTTP_STATUS_CODES.OK).json(user.serialize());
         })
+        //If anything happens that did not go the way it was expected to go, return the error
         .catch(error => {
             return response.status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR).json(error);
         });
 });
 
+//export all the userRouter CRUD
 module.exports = { userRouter };

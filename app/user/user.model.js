@@ -1,6 +1,6 @@
 //Use mongoose functions to make Schemas and Methods
 const mongoose = require('mongoose');
-//Make Joi Schemas(with data type and value restrictions) to compare with the mongoose Schema
+//Make Joi Schemas(with data type and value restrictions) to compare with the user's input
 const Joi = require('joi');
 //Able to hash the sensitive informations of the users
 const bcrypt = require('bcryptjs');
