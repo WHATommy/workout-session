@@ -25,7 +25,7 @@ passport.use(localStrategy);
 passport.use(jwtStrategy);
 
 // MIDDLEWARE(Every request you made in this server will go through these middleware's first)
-app.use(morgan('combined')); //Intercepts and logs all the HTTP requests to the console
+app.use(morgan('common')); //Intercepts and logs all the HTTP requests to the console
 app.use(express.json()); //Converts the data to a json format so our server are able to use it
 app.use(express.static('./public')); //Able to intercept all the HTTP request that match the files within the public folder
 

@@ -1,4 +1,4 @@
-//Global Functions, ;etting other files have access to these functions
+//Global Functions, setting other files have access to these functions
 window.ETC_MODULE = {
     getQueryStringParam
 };

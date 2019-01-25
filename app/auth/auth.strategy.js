@@ -48,13 +48,13 @@ const jwtStrategy = new JwtStrategy(
         jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('Bearer'),
         algorithms: ['HS256']
     },
-
+    //https://www.npmjs.com/package/passport-jwt
     (token, done) => {
         done(null, token.user);
     }
 );
 
-//create a piece of middleware we can use for all our endpoints
+//Middleware we can use for all our endpoints
 const localPassportMiddleware = passport.authenticate('local', { session: false });
 const jwtPassportMiddleware = passport.authenticate('jwt', { session: false });
 
